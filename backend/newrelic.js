@@ -9,7 +9,7 @@ exports.config = {
   /**
    * Array of application names.
    */
-  app_name: ['mix-node'],
+  app_name: ['app-todo'],
   /**
    * Your New Relic license key.
    */
