@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todo-app-backend-prod
+  labels:
+    app: todo-app-backend-prod
+    tier: backend
+spec:
+  selector:
+    matchLabels:
+      app: todo-app-backend-prod
+      tier: backend
+  replicas: 1
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: todo-app-backend-prod
+        tier: backend
+    spec:
+      containers:
+        - name: todo-app-backend-prod
+          image: mudamudiberkelas/todo-api:v4
+          imagePullPolicy: Always
+          env:
+            - name: MONGO_URL
+              value: "mongodb://mongodb-service:27017"
+          ports:
+            - containerPort: 4000
+              protocol: TCP
+      restartPolicy: Always
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: todo-app-backend-prod-svc
+spec:
+  #clusterIP: 100.64.204.27
+  selector:
+    app: todo-app-backend-prod
+    tier: backend
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      port: 4000
+      targetPort: 4000
