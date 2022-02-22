@@ -1,8 +1,8 @@
 docker pull mongo:3.6.19-xenial
 
-docker build -t todo-frontend:v2 .
-docker tag todo-frontend:v2  mudamudiberkelas/todo-frontend:v2
-docker push mudamudiberkelas/todo-frontend:v2 
+docker build -t todo-frontend:v6 .
+docker tag todo-frontend:v6  mudamudiberkelas/todo-frontend:v6
+docker push mudamudiberkelas/todo-frontend:v6 
 
 docker build -t todo-api:v4 .
 docker tag todo-api:v4 mudamudiberkelas/todo-api:v4
