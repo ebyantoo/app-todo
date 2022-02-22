@@ -15,7 +15,7 @@ class App extends Component {
       <Router>
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="https://codingthesmartway.com" target="_blank">
+            <a class="navbar-brand" href="https://google.com" target="_blank">
              
             </a>
             <Link to="/" className="navbar-brand"></Link>

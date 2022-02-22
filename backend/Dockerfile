@@ -5,6 +5,7 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 COPY package*.json ./
+COPY newrelic.js ./
 
 RUN npm install --silent
 RUN npm install newrelic --save
