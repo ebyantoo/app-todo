@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
         - name: todo-app-frontend-prod
-          image: mudamudiberkelas/todo-frontend:v6
+          image: mudamudiberkelas/todo-api:v1
           imagePullPolicy: Always
           ports:
             - containerPort: 3000

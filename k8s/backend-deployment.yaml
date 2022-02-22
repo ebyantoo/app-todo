@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
         - name: todo-app-backend-prod
-          image: mudamudiberkelas/todo-api:v4
+          image: mudamudiberkelas/todo-api:v1
           imagePullPolicy: Always
           env:
             - name: MONGO_URL

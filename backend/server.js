@@ -7,8 +7,7 @@ const todoRoutes = express.Router();
 const PORT = 4000;
 
 let Todo = require('./todo.model');
-
-require('newrelic');
+require('newrelic')
 
 app.use(cors());
 app.use(bodyParser.json());
