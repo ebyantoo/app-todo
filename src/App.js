@@ -7,7 +7,7 @@ import CreateTodo from "./components/create-todo.component";
 import EditTodo from "./components/edit-todo.component";
 import TodosList from "./components/todos-list.component";
 
-//import logo from "./logo.svg";
+import logo from "./logo.svg";
 
 class App extends Component {
   render() {
@@ -18,7 +18,7 @@ class App extends Component {
             <a class="navbar-brand" href="https://codingthesmartway.com" target="_blank">
               <img src={logo} width="30" height="30" alt="CodingTheSmartWay.com" />
             </a>
-            <Link to="/" className="navbar-brand">TODO</Link>
+            <Link to="/" className="navbar-brand"></Link>
             <div className="collpase navbar-collapse">
               <ul className="navbar-nav mr-auto">
                 <li className="navbar-item">
