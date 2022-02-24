@@ -47,7 +47,7 @@ spec:
   selector:
     app: todo-app-database
     tier: database
-  type: NodePort
+  type: ClusterIP
   sessionAffinity: None
   sessionAffinityConfig:
     clientIP:
