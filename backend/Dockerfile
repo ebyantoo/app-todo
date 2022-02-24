@@ -5,6 +5,7 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 
+RUN npm  run build -prod
 RUN npm install --silent
 
 COPY . .
